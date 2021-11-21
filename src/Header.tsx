@@ -9,7 +9,10 @@ export const Header = () => {
         <div>
             {isConnected ? (
                 <div>
-                    Account: {account} connected!
+                    Account: {`${account?.slice(0, 4)}...${account?.slice(-4)}`}{' '}
+                    connected!
+                    <br />
+                    <br />
                     <button color="primary" onClick={() => deactivate()}>
                         Disconnect
                     </button>
